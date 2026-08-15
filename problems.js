@@ -68,3 +68,39 @@ let userData = {
 // console.log(`Email: ${userData.email}`);
 // console.log(`Skills: ${userData.skills.join(", ")}`);
 // console.log(`Active: ${userData.active}`);
+// Extra Challenge Ideas
+// একটি shopping cart object বানাও।
+// 
+let shopingCard = { productName: "Table", price: 34000, quantity: 22, total: 330000, isAvailable: true };
+// console.log(shopingCard);
+// একটি function দিয়ে user login check করো।
+function userLogin(isLogin) {
+    if (isLogin === true) {
+        return "Logged in";
+    }
+    return "Please login";
+}
+// console.log(userLogin(true));
+// array থেকে even numbers filter করো।
+function getEven(numbers) {
+    let even = numbers.filter((num) => num % 2 === 0);
+    return even;
+}
+let numArr = [12, 23, 34, 34, 43, 45];
+// console.log(getEven(numArr));
+// nested object থেকে country বের করো।
+let nestedObj = {
+    name: "ALice",
+    age: 34,
+    address: {
+        city: "dakak",
+        country: "BD"
+    }
+};
+// console.log(nestedObj.address.country);
+// type-safe function দিয়ে total price calculate করো।
+function typeSafe(numbers) {
+    let total = numbers.reduce((acc, current) => acc + current, 0);
+    return total;
+}
+console.log(typeSafe([23, 34, 45, 56, 45, 23]));

@@ -101,3 +101,57 @@ let userData:{name:string, age: number, email: string, skills:string[], active:b
 
 
 
+// Extra Challenge Ideas
+// একটি shopping cart object বানাও।
+// 
+let shopingCard:{productName:string; price:number; quantity: number; total: number; isAvailable: boolean} = {productName: "Table", price: 34000, quantity: 22, total: 330000, isAvailable:true};
+
+
+// console.log(shopingCard);
+
+// একটি function দিয়ে user login check করো।
+
+function userLogin(isLogin:boolean):string{
+  if(isLogin === true){
+    return "Logged in"
+  }return "Please login"
+}
+
+// console.log(userLogin(true));
+
+
+// array থেকে even numbers filter করো।
+function getEven(numbers:number[]):number[]{
+  let even:number[] = numbers.filter((num) => num % 2 === 0)
+ return even; 
+}
+
+let numArr = [12,23,34,34,43,45];
+// console.log(getEven(numArr));
+
+
+// nested object থেকে country বের করো।
+
+let nestedObj:{name:string; age: number; address:{city: string; country: string}} = {
+  name:"ALice",
+  age: 34,
+  address:{
+    city: "dakak",
+    country: "BD"
+  }
+}
+
+
+// console.log(nestedObj.address.country);
+
+
+
+// type-safe function দিয়ে total price calculate করো।
+
+function typeSafe(numbers:number[]):number{
+  let total:number = numbers.reduce((acc, current)=> acc + current, 0)
+
+  return total;
+}
+
+// console.log(typeSafe([23,34,45,56,45,23]));
